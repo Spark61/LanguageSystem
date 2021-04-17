@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021. Spark61
+ * This File, its contents and by extension the corresponding project is property of Spark61 and may not be used without explicit permission to do so.
+ *
+ * spark61@sv-studios.net
+ * management@sv-studios.net
+ * info@zyonicsoftware.com
+ */
+
 package de.spark61.languagesystem;
 
 import de.spark61.config.Document;
