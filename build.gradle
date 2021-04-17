@@ -11,8 +11,8 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-sourceCompatibility = 14
-targetCompatibility = 14
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
