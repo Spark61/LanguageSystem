@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'de.spark61'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    maven { url 'https://jitpack.io' }
+}
+
+sourceCompatibility = 14
+targetCompatibility = 14
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    //Config & JSON Api
+    compile 'com.github.Spark61:Config:d30c089c79'
+
+}
+
+
+jar {
+    enabled = true
+    version(project.version)
+
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+
+    manifest {
+        attributes["Implimentation-Title"] = project.name
+        attributes["Main-Class"] = "Test"
+        attributes["Implementation-Version"] = version
+    }
+}
