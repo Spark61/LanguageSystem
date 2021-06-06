@@ -30,7 +30,7 @@ public class LanguageMessages extends Document {
      * @throws IOException wenn ein I/O Fehler auftritt
      */
     protected LanguageMessages(@NotNull final InputStream inputStream, @NotNull final Language language) throws IOException {
-        super(IOUtils.toString(inputStream, StandardCharsets.UTF_8));
+        super(inputStream);
 
         this.language = language;
     }
